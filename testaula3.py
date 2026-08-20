@@ -1,8 +1,8 @@
 #https://clubes.obmep.org.br/blog/a-matematica-nos-documentos-a-matematica-dos-cpfs/
-# cpf = "280012389"
-# cpf2 = "800123893"
-cpf = "622396953"
-cpf2 = "223969538"
+cpf = "280012389"
+cpf2 = "800123893"
+# cpf = "622396953"
+# cpf2 = "223969538"
 soma = 0
 soma2 = 0
 mult = 10
