@@ -22,21 +22,21 @@ int main() {
     sobra50 = numero - (resto50 * 50); //isso e o resto da divisão não precisa escrever a equação toda
 
     resto20 = sobra50 / 20;
-    sobra20 = resto20 - (resto20 * 20);
+    sobra20 = sobra50 - (resto20 * 20);
 
     resto10 = sobra20 / 10;
-    sobra10 = resto10 - (resto10 * 10);
+    sobra10 = sobra20 - (resto10 * 10);
 
     resto5 = sobra10 / 5;
-    sobra5 = resto5 - (resto5 * 5);
+    sobra5 = sobra10 - (resto5 * 5);
 
     restou = sobra5 / 1;
 
      
-    printf("%d, %d, %d, %d,",sobra50,sobra20,sobra10,sobra5);
-    printf("notas de 50: %d, notas de 20: %d, notas de 10: %d, notas de 5: %d",resto50,resto20,resto10,resto5);
-    if (restou < 5){
-        printf("%d", restou);
+    //printf("%d, %d, %d, %d,",sobra50,sobra20,sobra10,sobra5);
+    printf("notas de 50: %d, notas de 20: %d, notas de 10: %d, notas de 5: %d \n",resto50,resto20,resto10,resto5);
+    if ((restou < 5) && (restou > 0)){
+        printf("um total de R$ %d não pode ser sacado\n", restou);
     }
     return 0;
 }
