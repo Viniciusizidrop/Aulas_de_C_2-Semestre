@@ -14,7 +14,7 @@ int main(){
     else if(ano % 4 == 0) {
         printf("esse ano e bissexto\n");}
     else{
-        printf("Error: digite um numero\n");}
+        printf("Error\n");}
         return 0;
         }
     
