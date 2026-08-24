@@ -19,16 +19,16 @@ int main() {
     
     
     resto50 = numero / 50;
-    sobra50 = numero - (resto50 * 50); //isso e o resto da divisão não precisa escrever a equação toda
+    sobra50 = numero % 50;
 
     resto20 = sobra50 / 20;
-    sobra20 = sobra50 - (resto20 * 20);
+    sobra20 = sobra50 % 20;
 
     resto10 = sobra20 / 10;
-    sobra10 = sobra20 - (resto10 * 10);
+    sobra10 = sobra20 % 10;
 
     resto5 = sobra10 / 5;
-    sobra5 = sobra10 - (resto5 * 5);
+    sobra5 = sobra10 % 5;
 
     restou = sobra5 / 1;
 
