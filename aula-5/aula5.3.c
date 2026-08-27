@@ -12,6 +12,6 @@ int main() {
         soma += i;
     }
     printf("A soma de 1 a %d é: %d\n",n,soma);
-
+    
     return 0;
 }
