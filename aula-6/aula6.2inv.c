@@ -26,18 +26,16 @@ int main(){
   if (ehpar(numero_maximo)) {
     printf("Não é impar!\n");
   } else {
-    for (int linha = 1; linha <= ((numero_maximo + 1) / 2); linha++) { //esse for cuida do canto que o print vai imprimir invertendo ele a piramide fica de cabeça pra cima
-      for (int numero_iterador = 1; numero_iterador <= numero_maximo; numero_iterador++) { //e nesse for se inverter os ifs oq tava dentro fica do lado de fora
+    for (int linha = ((numero_maximo + 1) / 2); linha >1 / 2; linha--) { 
+      for (int numero_iterador = 1; numero_iterador <= numero_maximo; numero_iterador++) { 
         if (numero_iterador == numero_maximo && linha == 1) {
-          printf("%d \n", numero_iterador);// esse imprime o ultimo número da primeira linha quebra ela é só
-            //printf("a \n");
+          printf("%d \n", numero_iterador);
         } else if (numero_iterador == numero_maximo) {
-          printf("- \n");// preenche onde não tem número na lateral da direita e quebra a linha
+          printf("- \n");
         } else if (numero_iterador < linha || numero_iterador > (numero_maximo - linha) + 1) {
-          printf("- ");//preenche onde não tem numero - na lateral da direita
+          printf("- ");
         } else {
-          printf("%d ", numero_iterador);//esse imprime todos os numeros exceto o ultimo da primeira linha
-          //printf("b ");
+          printf("%d ", numero_iterador);
         }
       }
     }
