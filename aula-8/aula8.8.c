@@ -8,4 +8,21 @@
 // ***
 // ****
 #include <stdio.h>
-int main(){}
+int main(){
+    int base;
+    printf("Digite qual será o tamanho da base do triangulo: ");
+    scanf("%d", &base);
+
+    for(int linha=1;linha<=base;linha++){
+        for(int i=1;i<=linha;i++){
+        if(linha==1 || linha<=i){
+            printf("*\n");
+        }
+        else{
+            printf("*");
+        }
+
+
+    }
+    }
+}
