@@ -26,5 +26,68 @@ Exiba o status final: "Embarque Autorizado" ou "Embarque Negado", detalhando qua
 documento ou requisito impediu a viagem.*/
 #include <stdio.h>
 int main(){
-    
+    int passaporte,visto,vacina,embarque=0;
+    int caso;
+    printf("Escolha o seu destino (1-América do Norte | 2-Europa | 3-Ásia): ");
+    scanf("%d",&caso);
+    printf("Digite 1 se possuir um passaporte valido e 0 se não: ");
+    scanf("%d",&passaporte);
+    printf("Digite 1 se seu visto esta em dia e 0 se não: ");
+    scanf("%d",&visto);
+    printf("Digite 1 se a sua vacinação esta em dia e 0 se não: ");
+    scanf("%d",&vacina);
+
+    switch (caso)
+    {
+    case 1:
+    if(passaporte==1 && visto==1 && vacina==1){
+      embarque=1;
+    }
+    if(passaporte==0){
+      printf("Passaporte Invalido!\n");
+    }
+    if(visto==0){
+      printf("Visto Negado!\n");
+    }
+    if(vacina==0){
+      printf("Vacinação não esta em dia!\n");
+    }
+      break;
+    case 2:
+    if(passaporte==1 && vacina==1){
+      embarque=1;
+    }
+    if(passaporte==0){
+      printf("Passaporte Invalido!\n");
+    }
+    if(vacina==0){
+      printf("Vacinação não esta em dia!\n");
+    }
+
+    break;
+    case 3:
+    if(passaporte==1 && (visto==1 || vacina==1)){
+      embarque=1;
+    }
+    if(passaporte==0){
+      printf("Passaporte Invalido!\n");
+    }
+    if(visto==0 && vacina==0){
+      printf("Visto Negado ou vanicação não esta em dia!\n");
+    }
+
+    break;
+
+    default:
+    printf("Error, tente novamente\n");
+      break;
+    }
+
+    if (embarque==1){
+      printf("Embarque Autorizado\n");
+    }
+    else{
+      printf("Embarque Negado\n");
+    }
+
 }

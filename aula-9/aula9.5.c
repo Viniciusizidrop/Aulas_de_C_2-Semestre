@@ -25,5 +25,31 @@ Saída do Programa:
 Exiba a cor da classificação do paciente e o tempo máximo de espera recomendado.*/
 #include <stdio.h>
 int main(){
-    
+    int torax,respiracao,febre;
+
+    printf("Liste de 0 a 3 qual o seu nivel de dor das partes a seguir: \n");
+    printf("dor toracica: ");
+    scanf("%d",&torax);
+    printf("dor respiratoria: ");
+    scanf("%d",&respiracao);
+    printf("da sua febre: ");
+    scanf("%d",&febre);
+  int soma = torax+respiracao+febre;
+
+  if(torax==3 || respiracao==3){
+    printf("Classificação VERMELHA (Emergência - Atendimento Imediato)\n");
+  }
+  else if((torax==2 || respiracao==2)  && febre>=2){
+    printf("Classificação LARANJA (Muito Urgente - Até 10 minutos)\n");
+  }
+  else if(torax>=2 || respiracao>=2 || febre>=2){
+    printf("Classificação AMARELA (Urgente - Até 60 minutos)\n");
+  }
+  else if (soma==1 || soma==2 || soma==3){
+    printf("Classificação VERDE (Pouco Urgente)\n");
+  }
+  else{
+    printf("Classificação AZUL (Não Urgente)\n");
+  }
+  
 }

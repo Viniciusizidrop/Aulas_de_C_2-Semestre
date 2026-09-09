@@ -30,5 +30,55 @@ Saída do Programa:
 Exiba o detalhamento do cálculo e o valor total final a ser pago pelo motorista.*/
 #include <stdio.h>
 int main(){
-    
-}
+    char tipo;
+    int horas;
+    int periodo;
+    int tarifa;
+
+    printf("Digite o tipo do seu veiculo(M-moto|C-carro|V-van/utilitario): ");
+    scanf("%c",&tipo);
+    printf("Digite por quantas horas seu veiculo ficou estacionado: ");
+    scanf("%d",&horas);
+    printf("Digite o horario de quando você estacionou o veiculo: ");
+    scanf("%d",&periodo);
+
+    switch (tipo){
+    case ('M'):
+    case('m'):
+      tarifa = horas * 5;
+      if (horas>5){
+        tarifa = tarifa - (tarifa * 0.10);
+      }
+      if (periodo>=18 && periodo<=24){
+          tarifa = tarifa - (tarifa * 0.20);
+  }
+  printf("a tarifa da sua moto ficou em R$%d\n",tarifa);
+
+      break;
+    case ('C'):
+    case('c'):
+    tarifa = horas * 10;
+    if (horas>5){
+    tarifa = tarifa - (tarifa * 0.10);
+      }
+    if (periodo>=12 && periodo<=18){
+    tarifa +=8;}
+  printf("a tarifa do seu carro ficou em R$%d\n",tarifa);    
+    break;
+
+    case('V'):
+    case('v'):
+    tarifa = horas * 15;
+    if (horas>5){
+    tarifa = tarifa - (tarifa * 0.10);
+      }
+    if (periodo>=12 && periodo<=18){
+    tarifa +=8;}
+    printf("a tarifa da sua van ficou em R$%d\n",tarifa);
+    break;
+
+    default:
+    printf("Error");
+      break;
+    }
+  }
