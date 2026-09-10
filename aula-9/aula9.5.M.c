@@ -36,7 +36,10 @@ int main(){
     scanf("%d",&febre);
   int soma = torax+respiracao+febre;//na falta de pensamento foi a solução mais facil K, era so mudar a ordem e deixar o azul em cima 
 
-  if(torax==3 || respiracao==3){
+    if(torax==0 && respiracao==0 && febre==0){//jeito melhorado mudando a ordem para que o sistema faça a validação correta sem gambiarras
+        printf("Classificação AZUL (Não Urgente)\n");
+    }
+  else if(torax==3 || respiracao==3){
     printf("Classificação VERMELHA (Emergência - Atendimento Imediato)\n");
   }
   else if((torax==2 || respiracao==2)  && febre>=2){
@@ -45,11 +48,9 @@ int main(){
   else if(torax>=2 || respiracao>=2 || febre>=2){
     printf("Classificação AMARELA (Urgente - Até 60 minutos)\n");
   }
-  else if (soma==1 || soma==2 || soma==3){
+  else if (torax<=1 || respiracao<=1 || febre<=1){
     printf("Classificação VERDE (Pouco Urgente)\n");
   }
-  else{
-    printf("Classificação AZUL (Não Urgente)\n");
-  }
+
   
 }

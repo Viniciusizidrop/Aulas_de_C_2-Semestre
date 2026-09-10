@@ -1,3 +1,7 @@
+/*Exercício 1: Crie um programa em C que leia três valores reais representando os lados de um triângulo.
+Primeiro, o programa deve verificar se esses lados podem efetivamente formar um triângulo (a
+soma de dois lados deve ser sempre maior que o terceiro). Caso formem, classifique-o e exiba
+uma mensagem na tela indicando se ele é: */
 #include <stdio.h>
 
 int main() {
