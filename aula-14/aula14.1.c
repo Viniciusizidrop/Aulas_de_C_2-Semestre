@@ -11,7 +11,6 @@ int main(){
         if (n==2) {
             printf("O 2 é par");
         }
-
         else if(par == 0){
             printf("O %d é par",n);
         }

@@ -1,8 +1,10 @@
 #include <stdio.h>
-int main(){
-int a= 5, b=8;
-int *p =&a, *q = &b;
-*p = *q;
-q = p;
-printf("%d %d\n", a, b);
+int main() {
+    int x = 23;
+    int *p = &x;
+    printf("%d\n",*p);
+    *p = 100;
+    printf("%d\n", x);
 }
+//& endereço de onde a variavel esta
+//* disreferenciação acessa e modifica o valor que esta sendo apontado
